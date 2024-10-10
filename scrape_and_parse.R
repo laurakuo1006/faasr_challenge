@@ -1,6 +1,6 @@
 library(RedditExtractoR)
 library(dplyr) 
-options(HTTPUserAgent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36")
+options(HTTPUserAgent="Mozilla/5.0 (Windows NT 6.3; Win 64 ; x64) Apple WeKit /537.36(KHTML , like Gecko) Chrome/80.0.3987.162 Safari/537.36")
 
 scrape_and_parse <- function(keyword="default") {
   threads <- find_thread_urls(keywords = keyword, sort_by = "relevance", period = "hour")
