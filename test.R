@@ -36,7 +36,7 @@ test <- function(){
   write.csv(texts_df, file="texts.csv", row.names = FALSE)
   
   faasr_put_file(local_file="texts.csv", remote_folder="reddit_texts", remote_file="texts.csv")
-  log_msg <- paste0('Function create_sample_data finished; outputs written to folder ', folder, ' in default S3 bucket')
+  log_msg <- paste0('Function test')
   faasr_log(log_msg)
 }
 
