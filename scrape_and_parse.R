@@ -1,6 +1,6 @@
 library(RedditExtractoR)
 library(dplyr) 
-options(RCurlOptions = list(useragent = "reddit-sentiment-app"))
+options(RCurlOptions = list(useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"))
 
 scrape_and_parse <- function(keyword) {
   threads <- find_thread_urls(keywords = keyword, sort_by = "relevance", period = "hour")
