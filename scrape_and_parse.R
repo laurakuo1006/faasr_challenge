@@ -1,3 +1,8 @@
+install.packages("RedditExtractoR")
+install.packages("dplyr") 
+library(RedditExtractoR)
+library(dplyr) 
+
 scrape_and_parse <- function(keyword) {
   threads <- find_thread_urls(keywords = keyword, sort_by = "relevance", period = "day")
   thread_content <- get_thread_content(threads$url[1:5])
