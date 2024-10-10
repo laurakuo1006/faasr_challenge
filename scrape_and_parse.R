@@ -3,7 +3,7 @@ library(dplyr)
 options(RCurlOptions = list(useragent = "reddit-sentiment-app"))
 
 scrape_and_parse <- function(keyword) {
-  threads <- find_thread_urls(keywords = keyword, sort_by = "relevance", period = "day")
+  threads <- find_thread_urls(keywords = keyword, sort_by = "relevance", period = "hour")
   thread_content <- get_thread_content(threads$url[1:5])
   text_data <- thread_content$threads %>%
     filter(!is.na(text) & text != "") %>%
