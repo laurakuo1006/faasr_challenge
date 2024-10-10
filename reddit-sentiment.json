@@ -17,16 +17,18 @@
     },
     "FunctionList": {
         "start": {
-            "FunctionName": "server",
+            "FunctionName": "scrape_and_parse",
             "FaaSServer": "My_GitHub_Account",
             "Arguments": {
+              "keyword": "keyboard"
             }
         }
     },
     "ActionContainers": {
+      "start": "ghcr.io/laurakuo1006/github-actions-tidyverse:1.3.0"
     },
     "FunctionGitRepo": {
-      "server": "laurakuo1006/faasr_challenge"
+      "scrape_and_parse": "laurakuo1006/faasr_challenge/scrape_and_parse.R"
     },
     "FunctionInvoke": "start",
     "InvocationID": "",
