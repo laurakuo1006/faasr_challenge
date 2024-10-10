@@ -1,5 +1,3 @@
-install.packages("RedditExtractoR")
-install.packages("dplyr") 
 library(RedditExtractoR)
 library(dplyr) 
 
