@@ -1,5 +1,6 @@
 library(RedditExtractoR)
 library(dplyr) 
+options(RCurlOptions = list(useragent = "reddit-sentiment-app"))
 
 scrape_and_parse <- function(keyword) {
   threads <- find_thread_urls(keywords = keyword, sort_by = "relevance", period = "day")
