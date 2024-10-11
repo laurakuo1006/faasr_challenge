@@ -22,22 +22,44 @@
             "Arguments": {
                 "keyword": "keyboard"
             },
-            "InvokeNext": "sentiment_analysis"
+            "InvokeNext": [
+              "sentiment_analysis",
+              "common_words"
+              ]
         },
         "sentiment_analysis": {
             "FunctionName": "sentiment_analysis",
             "FaaSServer": "My_GitHub_Account",
             "Arguments": {
+            },
+            "InvokeNext": "combine_summary"
+        },
+        "common_words": {
+            "FunctionName": "count_common_words",
+            "FaaSServer": "My_GitHub_Account",
+            "Arguments": {
+            },
+            "InvokeNext": "combine_summary"
+        },
+        "combine_summary": {
+            "FunctionName": "combine_summary",
+            "FaaSServer": "My_GitHub_Account",
+            "Arguments": {
+              "keyword":"keyboard"
             }
         }
     },
     "ActionContainers": {
       "start": "ghcr.io/laurakuo1006/github-actions-tidyverse:1.3.0",
-      "sentiment_analysis": "ghcr.io/laurakuo1006/github-actions-tidyverse:1.3.0"
+      "sentiment_analysis": "ghcr.io/laurakuo1006/github-actions-tidyverse:1.3.0",
+      "common_words": "ghcr.io/laurakuo1006/github-actions-tidyverse:1.3.0",
+      "combine_summary": "ghcr.io/laurakuo1006/github-actions-tidyverse:1.3.0"
     },
     "FunctionGitRepo": {
       "scrape_and_parse": "laurakuo1006/faasr_challenge/scrape_and_parse.R",
-      "sentiment_analysis": "laurakuo1006/faasr_challenge/sentiment_analysis.R"
+      "sentiment_analysis": "laurakuo1006/faasr_challenge/sentiment_analysis.R",
+      "count_common_words": "laurakuo1006/faasr_challenge/count_common_words.R",
+      "combine_summary": "laurakuo1006/faasr_challenge/combine_summary.R"
     },
     "FunctionInvoke": "start",
     "InvocationID": "",
