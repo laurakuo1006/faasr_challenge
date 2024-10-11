@@ -21,14 +21,23 @@
             "FaaSServer": "My_GitHub_Account",
             "Arguments": {
                 "keyword": "keyboard"
+            },
+            "InvokeNext": "sentiment_analysis"
+        },
+        "sentiment_analysis": {
+            "FunctionName": "sentiment_analysis",
+            "FaaSServer": "My_GitHub_Account",
+            "Arguments": {
             }
         }
     },
     "ActionContainers": {
-      "start": "ghcr.io/laurakuo1006/github-actions-tidyverse:1.3.0"
+      "start": "ghcr.io/laurakuo1006/github-actions-tidyverse:1.3.0",
+      "sentiment_analysis": "ghcr.io/laurakuo1006/github-actions-tidyverse:1.3.0"
     },
     "FunctionGitRepo": {
-      "scrape_and_parse": "laurakuo1006/faasr_challenge/scrape_and_parse.R"
+      "scrape_and_parse": "laurakuo1006/faasr_challenge/scrape_and_parse.R",
+      "sentiment_analysis": "laurakuo1006/faasr_challenge/sentiment_analysis.R"
     },
     "FunctionInvoke": "start",
     "InvocationID": "",
