@@ -2,9 +2,10 @@ library(tidyverse)
 library(tidytext)
 library(forcats)
 library(scales)
+library(dplyr)
 
 sentiment_analysis <- function(){
-  faasr_get_file(remote_folder="laurafaasrchallenge", remote_file="texts.csv", local_file="texts.csv")
+  faasr_get_file(remote_folder="reddit_texts", remote_file="texts.csv", local_file="texts.csv")
   readfile <- read.csv("texts.csv")
   contents <- data.frame(ID=1:nrow(readfile), readfile)
   colnames(contents)[2] <- "reddit_post"
