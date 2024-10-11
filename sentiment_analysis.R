@@ -27,7 +27,7 @@ sentiment_analysis <- function(){
   summary <- data.frame(neg_percentage=neg_percentage, pos_percentage=pos_percentage)
   write.csv(summary, file="summary.csv", row.names = FALSE)
   
-  faasr_put_file(local_file="summary.csv", remote_folder="reddit_texts", remote_file="summary.csv")
+  faasr_put_file(local_file="summary.csv", remote_folder="reddit_texts", remote_file="sentiment_summary.csv")
   log_msg <- paste0('Sentiment analysis test')
   faasr_log(log_msg)
 }
