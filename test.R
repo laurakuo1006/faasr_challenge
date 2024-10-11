@@ -1,7 +1,7 @@
 library(httr)
 library(jsonlite)
 
-test <- function(){
+scrape_and_parse <- function(keyword){
   client_id <- "isQm_ZT-BchuVAk_bxQXOQ"
   client_secret <- "r5cA2ybl1ywrzfw5PT9BIeRHuOSNkg"
   response <- POST("https://www.reddit.com/api/v1/access_token",
@@ -23,7 +23,7 @@ test <- function(){
   
   query_params <- list(
     limit = 100,
-    q = "keyboard"
+    q = keyword
   )
   
   response <- GET(url, query = query_params, add_headers(Authorization = authorization_bearer, `User-Agent` = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"))
