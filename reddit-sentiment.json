@@ -17,9 +17,10 @@
     },
     "FunctionList": {
         "start": {
-            "FunctionName": "test",
+            "FunctionName": "scrape_and_parse",
             "FaaSServer": "My_GitHub_Account",
             "Arguments": {
+                "keyword": "keyboard"
             }
         }
     },
@@ -27,7 +28,7 @@
       "start": "ghcr.io/laurakuo1006/github-actions-tidyverse:1.3.0"
     },
     "FunctionGitRepo": {
-      "test": "laurakuo1006/faasr_challenge/test.R"
+      "scrape_and_parse": "laurakuo1006/faasr_challenge/scrape_and_parse.R"
     },
     "FunctionInvoke": "start",
     "InvocationID": "",
