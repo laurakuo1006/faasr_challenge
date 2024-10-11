@@ -22,11 +22,11 @@ Run the following command. Fair warning: it will take a few minutes to install a
 ```
 source('rocker_setup_script')
 ```
-
-# Configure the FaaSr secrets file with your GitHub token
+# Configurations
+## Configure the FaaSr secrets file with your GitHub token
 Open the file named faasr_env in the editor. You need to enter your GitHub token here: replace the string "GITHUB_PERSONAL_ACCESS_TOKEN" with your GitHub token, and save this file. 
 
-# Configure the FaaSr JSON simple workflow template with your GitHub username and specify which keyword you would like to analyze 
+## Configure the FaaSr JSON simple workflow template with your GitHub username and specify which keyword you would like to analyze 
 Open the file reddit-sentiment.json  and setup your GitHub username. Set keyword argument to the necessary functions: scrape_and_parse and combine_summary. (Default is "keyboard")
 
 
